@@ -1,0 +1,11 @@
+var
+fMedia: Real;
+
+inicio
+  fMedia := media (9,fechamento) ;
+  se (fMedia[1] < fMedia) então
+    paintbar (clverde)
+  senão
+  se (fMedia[1] > fMedia) então 
+    paintbar (clvermelho);
+fim; 

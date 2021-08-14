@@ -1,0 +1,27 @@
+var
+  dias : integer;
+
+begin
+ if (BuyPosition=0) then
+    Begin
+      dias:=-1;  
+      if (SlowStochastic(5)<20) then
+        BuyAtMarket; 
+    end;
+  if (BuyPosition=1) then
+    Begin
+      dias:=dias+1; 
+      if (SlowStochastic(5)>80) then
+       SellToCoverAtMarket;
+
+  if (dias=7) then
+    ClosePosition;
+    end;
+end
+
+
+
+
+
+
+
